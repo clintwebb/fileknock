@@ -40,7 +40,7 @@ typedef struct {
 
 
 // free the resources for the current config that is loaded.
-void config_free(CONFIG configptr)
+extern void config_free(CONFIG configptr)
 {
 	config_t *config = configptr;
 	assert(config);
@@ -70,7 +70,7 @@ void config_free(CONFIG configptr)
 
 
 // load a config file into a structure.   Return a pointer to a config object on success, otherwise return NULL.
-CONFIG config_load(const char *path)
+extern CONFIG config_load(const char *path)
 {
 	assert(path);
 	config_t *config = NULL;
@@ -186,7 +186,7 @@ CONFIG config_load(const char *path)
 
 
 // Get a config value based on the key.  Will return a string.
-const char * config_get(CONFIG configptr, const char *key)
+extern const char * config_get(CONFIG configptr, const char *key)
 {
 	config_t *config = configptr;
 	assert(config);

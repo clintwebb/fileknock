@@ -1,6 +1,6 @@
 ALL: fileknockd
 
-fileknockd: fileknockd.c
+fileknockd: fileknockd.c configfile.o
 	gcc -o fileknockd $^
 
 configfile.o: configfile.c configfile.h

@@ -14,7 +14,7 @@ void main(void)
 		const char *writefile = config_get(config, "WriteFile");
 		if (writefile) { printf("Write File: '%s'\n", writefile);}
 		
-		int active = config_get_bool(config, "Activate");
+		int active = config_get_bool(config, "activate");
 		if (active != 0) {printf("Activate!\n");}
 		else { printf("Not Active!\n");}
 
