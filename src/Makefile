@@ -12,4 +12,5 @@ install: fileknockd
 configtest: configtest.c configfile.o
 	gcc -o configtest configtest.c configfile.o
 
-
+clean:
+	-rm configtest install configfile.o fileknockd
