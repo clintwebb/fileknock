@@ -14,3 +14,5 @@ configtest: configtest.c configfile.o
 
 clean:
 	-rm configtest install configfile.o fileknockd
+
+
