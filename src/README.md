@@ -14,19 +14,20 @@ RunUser=fxpuser
 ```
 
 ```
-# Monitor a specific set of files:
-MonitorFile=/data/run.pid
+# Monitor a specific file:
 MonitorFile=/data/error.txt
-FileModifiedExec=/usr/bin/action.sh
+FileModifiedExec=/usr/bin/error_action.sh
 ```
 
 When the running script is executed, several environment variables are set to indicate what actually changed 
 
 ```
-FK_FILE=/data/run.pid
+FK_FILE=/data/error.txt
 FK_ACTION=CLOSED
 ```
 
-When the fileknock daemon detects a change that causes a trigger to fire, it should actually ignore the events for that particular file while it is being processed.  Because the trigger will likely cause the action to cause more events while it is doing its action.  
+When the fileknock daemon detects a change that causes a trigger to fire, it is unable to actually ignore the events for that particular file while it is being processed.  Because the trigger will likely cause the action to cause more events while it is doing its action, care should be taken is setting triggers and actions for files.
+
+
 
 
